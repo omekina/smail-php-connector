@@ -16,7 +16,7 @@ function send(string $from, array $to, string $subject, string $message): bool {
 		return false;
 	}
   
-  $from = remove_control_characters($from);
+	$from = remove_control_characters($from);
 	$recipients = "";
 	foreach ($to as $recipient) {
 		$recipients .= remove_control_characters($recipient) . "\n";
